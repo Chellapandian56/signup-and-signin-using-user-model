@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="C:\Users\Chella\user-login\templates\userapp\index.css" /> 
+    <title>User Login</title>
+</head>
+<body>
+    <h2>Welcome To My Website</h2>
+
+
+    {% if user.is_authenticated %}
+    <h3>Hello,{{fname}}</h3>
+    <h4>Your Successfully Logged In.</h4>
+
+    
+    {% else %}
+    <button type="submit"><a href="/signup">SignUp</a></button>
+    <button type="submit"><a href="/signin">SignIn</a></button>
+    {% endif %}
+</body>
+</html>
